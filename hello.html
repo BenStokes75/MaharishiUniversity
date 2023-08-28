@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="img/logo/favicon.png" rel="icon">
+    <title>MUIT - Login</title>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/admin.min.css" rel="stylesheet">
+    <link href="/datepicker/jquery-ui.css" rel="stylesheet" />
+    <script src="/datepicker/jquery-ui.js"></script>
+    <link href="/datepicker/style.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        $(function () {
+            $(".DOB1").datepicker({
+                dateFormat: 'dd/mm/yy',
+                maxDate: new Date(),
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "-120:+0"
+            });
+        });
+    </script>
+    <style>
+        .bg-gradient-login {
+            background-size: cover;
+            background-image: url('img/bg.jpg')
+        }
+    </style>
+</head>
+<body class="bg-gradient-login">
+    <!-- Login Content -->
+    <div class="row">
+        <div class="col-md-7"></div>
+        <div class="col-lg-3" style="margin-top:3%">
+            <div class="row justify-content-center">
+                <div class="card shadow-sm my-5">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="login-form">
+                                <div class="text-center">
+                                    <img src="/img/Logofor.png" class="img-fluid" style="width:100%" />
+                                </div>
+                                <form method="post">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-lg" name="FormId" id="FormId" autocomplete="off" required placeholder="Username" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control form-control-lg" name="Password" id="Password" autocomplete="off" required placeholder="Password">
+                                    </div>
+                                    <div class="form-group" style="text-align:center">
+                                        <button type="button" style="border:none;background:none;font-style:italic;" data-toggle="modal" data-target="#exampleModalCenter">
+                                            Reset Password Click Here
+                                        </button>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" name="savemore" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="Login" />
+                                    </div>
+                                    <hr>
+                                    <div class="form-group">
+                                        <label>
+                                            *Note:- Your Form No available on your fee receipt
+                                        </label>
+                                    </div>
+                                    <input type="hidden" id="CampusIdd" value="" data-val="true" data-val-required="The CampusIdd field is required." name="CampusIdd" />
+                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8I34hi_POdlFobm07tioQDd4wPqXOKfOLBHN6JMNGOR_A2NFQNwNciEM2aBpvdzDAYbdEwd3wwJcLIv7jCOEISjzA-OkygxcxLZr7QifhFpIe4--NLr_V_q9josIFBT6zyP8-33Y_RbrywsqqNR9DuU" /></form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Generate Password:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form method="post">
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <input type="text" class="form-control" id="FormId" autocomplete="off" Placeholder="Please Enter Your Form No..." name="FormId" value="" />
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <input type="date" class="form-control" id="dob" Placeholder="DD/MM/YYYY" autocomplete="off" required name="dob" value="" />
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <input type="password" id="Gpassword" class="form-control" autocomplete="off" Placeholder="Please Create Your Password..." name="Gpassword" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" runat="server" name="savemore" class="btn btn-primary" value="Generate" />
+                    </div>
+                    <input type="hidden" id="CampusIdd" value="" data-val="true" data-val-required="The CampusIdd field is required." name="CampusIdd" />
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8I34hi_POdlFobm07tioQDd4wPqXOKfOLBHN6JMNGOR_A2NFQNwNciEM2aBpvdzDAYbdEwd3wwJcLIv7jCOEISjzA-OkygxcxLZr7QifhFpIe4--NLr_V_q9josIFBT6zyP8-33Y_RbrywsqqNR9DuU" /></form>
+            </div>
+        </div>
+    </div>
+    <!-- Login Content -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/admin.min.js"></script>
+</body>
+</html>
